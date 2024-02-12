@@ -1,0 +1,462 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  
+  /* background-image: url('../assets/Background-fixed.png'); */
+  background-image: linear-gradient(to top right,#6A3B55 ,#44636E );
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  height: 100vh;
+  margin: 0; /* Menghilangkan margin bawaan dari body */
+  font-family: 'Arial', sans-serif; /* Ganti dengan font yang diinginkan */
+  color: #ffffff; /* Warna teks */
+
+}
+
+/* Tambahan styling untuk elemen-elemen lain jika diperlukan */
+
+
+header{
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding: 30px;
+}
+.header-sec{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+  /* margin-bottom: 100px; */
+}
+
+
+
+
+
+/*=============================*/
+/*=============================*/
+/*=============================*/
+/*===========Utility===========*/
+/*=============================*/
+/*=============================*/
+/*=============================*/
+
+.gap-5{
+  gap: 500px;
+}
+
+.border-white{
+  border: 1px solid #ffff;
+}
+
+.flexbox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mb-custom{
+  margin-bottom: 125px;
+}
+
+
+.fullscreen{
+  width: 100%;
+  height: 100%;
+  /* border: 1px solid red; */
+  margin: 0;
+  padding: 0;
+}
+
+.taharica-bg{
+  background-image: url('../assets/bahan-background.png');
+  background-size: 50%; 
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+}
+
+
+.gap-custom{
+  gap: 20px;
+}
+/*=============================*/
+/*=============================*/
+/*=============================*/
+/*===========header============*/
+/*=============================*/
+/*=============================*/
+/*=============================*/
+
+/*container*/
+.user-container{
+/*  border: 1px solid red;*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  position: relative;
+}
+
+.userIcon{
+  position: absolute;
+  top:0 ;
+  left:-80px ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+/*  border: 1px solid blue;*/
+/*  color: red;*/
+}
+
+
+/*///////////////////////*/
+.user-container-sec{
+/*  border: 1px solid red;*/
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 5px;
+  position: relative;
+}
+
+.userIcon-sec{
+  position: absolute;
+    top: -10px;
+    left: -10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+/*  border: 1px solid blue;*/
+/*  color: red;*/
+}
+
+.userInfo{
+  height: 35px;
+    transition: 200ms;
+}
+.userInfo:hover{
+  transform: scale(0.8); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  transition: 200ms;
+}
+
+.userIcon-sec p{
+  font-style: 12px;
+  color: white;
+  padding-top: 5px;
+  text-align: center;
+  
+}
+
+
+.userIcon:hover{
+  text-decoration: none;
+  
+}
+
+
+/*images*/
+.userIcon img{
+/*  width: ;*/
+  height: 35px;
+  transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+
+
+.userIcon p{
+  font-style: 12px;
+  color: white;
+  padding-top: 5px;
+  text-align: center;
+  
+}
+
+/* =========single============ */
+.landingPageHead{
+  height: 90px;
+  width: 100%;
+}
+
+
+
+.pageSingle {
+  width: 100%;
+  padding: 50px;
+
+  height: calc(100vh - 90px); /* 100vh dikurangi dengan tinggi landingPageHead */
+}
+
+/*=============================*/
+/*=============================*/
+/*=============================*/
+/*===========Main==============*/
+/*=============================*/
+/*=============================*/
+/*=============================*/
+
+
+.main{
+  height: 91%;
+}
+
+.heading-homepage{
+  font-size: 42px;
+  font-weight: 700;
+  font-style: bold;
+/*  color: red;*/
+}
+/*searchbar att*/
+.search-form {
+  background-repeat: white;
+  padding: 5px 10px;
+/*  border:1px solid grey;*/
+  width: 70%;
+}
+.search-field {
+  padding: 15px 25px;
+  border-radius: 10px;
+  border: 0;
+  width:78% ;
+}
+.search-field:active {
+  outline: none;
+}
+.search-submit{
+  display: none;
+}
+
+.search-btn {
+  padding: 15px 25px;
+  border-radius: 10px;
+  /* border: 0; */
+  background-color: white;
+  color: #292929;
+  width: 20%;
+  color: white;
+  font-weight: 600;
+  background-image: linear-gradient(to bottom right, #FF4242, #2B70CB);
+  transition: transform 0.2s ease; /* Menambahkan efek transisi untuk smooth hover */
+}
+
+.search-btn:hover {
+  
+  transform: scale(0.95); /* Mengecilkan tombol saat dihover */
+}
+
+
+
+
+.bg-white-custom{
+  background-color: #ffff;
+}
+
+
+
+/* toga */
+.rumah-toga{
+  position: relative;
+}
+.toga{
+  position: absolute;
+  top: 49px;
+  left: -16px;
+  width: 60px
+}
+
+
+
+
+
+
+/*=============================*/
+/*=============================*/
+/*=============================*/
+/*===========Navigation========*/
+/*=============================*/
+/*=============================*/
+/*=============================*/
+
+.navigation-menu {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  margin-top: 60px;
+}
+.navigation-menu li{
+  margin: 0 30px;
+  display: flex;
+}
+.navigation-ball {
+  width: 80px;
+  height: 80px;
+  text-decoration: none;
+  background-color: #443C49;
+  border-radius: 500px;
+  padding: 20px;
+  margin-top: 0 30px;
+  transition: background-color 2000ms, transform 0.5s ease; /* Menambahkan efek transisi untuk smooth hover */
+}
+
+.navigation-ball:hover {
+  background-color: #0f0d11;
+  transform: scale(0.95); /* Mengecilkan tombol saat dihover */
+  text-decoration: none;
+}
+
+
+.navigation-text{
+  font-style: 18px;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+}
+.navigation-text:hover{
+  text-decoration: none;
+}
+
+
+
+
+
+
+/* .post-highlight{
+  gap: 20px;
+} */
+
+
+
+
+.post-card{
+      /* border: 1px solid red; */
+      width: 300px;
+      height: 200px;
+      display: flex;
+      flex-direction: column;
+      /* padding: 12px; */
+      /* gap: 20px; */
+      margin: 0 20px;
+      box-shadow: 0px 0px 16px -2px #292929;
+  
+}
+
+
+
+.home-post-caption{
+  position: relative;
+  cursor: pointer;
+}
+.post-caption{
+  position: absolute;
+  top: 157px;
+  left: 0;
+  width: 300px;
+  padding: 10px;
+  background: linear-gradient(to top right, rgba(106, 59, 85, 0.6), rgba(68, 99, 110, 0.6));
+  transition: 500ms;
+  text-align: center;
+  margin: 0;
+}
+.post-caption:hover{
+  background: linear-gradient(to top right, #6A3B55, #44636E);
+  transition: 500ms;
+  color: blue;
+}
+.create-post{
+  text-decoration: none;
+  color: white;
+}
+.create-post:hover{
+  text-decoration: none;
+  color: white;
+}
+
+
+
+
+/* mostview */
+
+.mostviewHome {
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease; /* Menambahkan transisi untuk efek halus */
+}
+
+.mostviewHome:hover {
+  transform: scale(1.1); /* Menambahkan scaling 110% saat dihover */
+}
+
+.mostviewCaption{
+  position: absolute;
+  top: 156px;
+  left: 0;
+  width: 300px;
+  padding: 10px;
+  background: linear-gradient(to top right, rgba(106, 59, 85, 0.6), rgba(68, 99, 110, 0.6));
+  transition: 500ms;
+  text-align: center;
+  margin: 0;
+}
+.mostviewCaption:hover{
+  background: linear-gradient(to top right, #6A3B55, #44636E);
+  transition: 500ms;
+  color: blue;
+}
+
+
+.create-post{
+  text-decoration: none;
+  color: white;
+}
+.create-post:hover{
+  text-decoration: none;
+  color: white;
+}
+
+
+.mostview-card{
+  /* border: 1px solid red; */
+  min-width: 300px;
+  max-width: 300px;
+  /* height: 200px; */
+  display: flex;
+  flex-direction: column;
+  /* padding: 12px; */
+  /* gap: 20px; */
+  /* margin: 0 20px; */
+  /* box-shadow: 0px 0px 16px -2px #292929; */
+
+}
+
+
+
+
+
+
+
+
+/* =========== */
+/* =========== */
+/* ===Comment Area ==== */
+/* =========== */
+/* =========== */
+/* =========== */
+
+
+.comments-area{
+  border: 1px solid red;
+}
+
+
+
+
+
+
