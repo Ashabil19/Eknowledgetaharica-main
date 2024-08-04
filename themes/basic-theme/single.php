@@ -8,12 +8,14 @@
         <?php get_template_part('includes/section', 'blogcontent'); ?>
 
         <?php
-        // Menampilkan formulir komentar dan daftar komentar
-        if (comments_open() || get_comments_number()) :
+        // Mengecek apakah ada komentar atau tidak
+        if (comments_open() || get_comments_number()) {
+            // Memuat template komentar
             comments_template();
-        endif;
+        }
         ?>
 
+        <br>
     </div>
 </section>
 

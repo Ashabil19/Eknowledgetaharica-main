@@ -1,31 +1,39 @@
 
+<section class="pageSingle "> 
+    <div class="d-flex justify-content-center align-items-start pc-3  flex-wrap " style="height: auto; gap:20px;">
+        <?php if (have_posts()): while(have_posts()): the_post(); ?> 
+        <div class="mostview-card">
+                        <a class="mostviewHome" href="<?php the_permalink(); ?>"  style="width:650px; height:450px;">
+                            <?php if (has_post_thumbnail()) : ?>
+                                <?php the_post_thumbnail('thumbnail', array('class' => 'img-fluid')); ?>
+                            <?php else : ?>
+                                <?php 
+                                    $image = get_field('post-image'); // Mengambil nilai gambar dari ACF
+                                    if ($image): // Memeriksa apakah ada gambar yang tersedia
+                                ?>
+                                    <img src="<?php echo esc_url($image); ?>" alt="<?php echo esc_attr($image); ?>" class="img-fluid" />
+                                <?php else: // Jika tidak ada gambar yang tersedia ?>
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/programmer.jpeg" alt="img" class="img-fluid" />
+                                <?php endif; ?>
+                            <?php endif; ?>
+                            <p class="mostviewCaption text-center text-light">
+                                        <?php      // Mengambil judul post
+                                            $title = get_the_title();
+                                            
+                                            // Memisahkan judul menjadi array berdasarkan spasi
+                                            $words = explode(' ', $title);
 
-<section class="pageSingle bg-white-custom"> 
+                                            // Mengambil dua kata pertama
+                                            $short_title = implode(' ', array_slice($words, 0, 2));
 
-	<div class="d-flex justify-content-center align-items-start p-3  flex-wrap " style="height: auto;">
-		<?php if (have_posts()): while(have_posts()): the_post(); ?> 
-			<div class=" card m-3 p-3" style="max-width: 300px; height:300px;">
-				<div class="card-body d-flex flex-column text-dark ">
-						<h3> <?php the_title(); ?></h3>
+                                            // Menentukan apakah judul memiliki lebih dari dua kata
+                                            $has_more_words = count($words) > 2;
+                                        
+                                            echo $short_title . ($has_more_words ? '...' : ''); ?>
 
-						<?php $excerpt = get_the_excerpt();
-							$trimmed_excerpt = wp_trim_words($excerpt, 10, '...'); // Menggunakan tanda elipsis (...) sebagai tanda potongan.
-
-							echo $trimmed_excerpt; ?>
-
-						<a href="<?php the_permalink();?>" class="btn btn-success">Read More..</a>
-				</div>
-			</div>
-		<?php endwhile; else: endif;?>
-
-
-	</div>
+                            </p>
+                        </a>
+                    </div>
+        <?php endwhile; else: endif;?>
+    </div>
 </section>
-
-
-
-
-
-
-
- 
